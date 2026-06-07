@@ -17,11 +17,9 @@ distributed-consensus-engine/
 ├── Dockerfile
 ├── docker-compose.yml   # 5 nodes + adversary + client + toxiproxy
 ├── requirements.txt
-├── project_report.pdf   # = "Assignment (Q1) [Roll No.].pdf"
+├── project_report.pdf   # = "Assignment (Q1) G25AI1024.pdf"
 └── README.md
 ```
-
-> Replace `[Roll No.]` everywhere (this README, the report filename, compose) with your roll number.
 
 ---
 
@@ -117,23 +115,3 @@ docker compose --profile byzantine down -v
 | Signature rejection | `ADVERSARY_MODE=tamper` / `forge` | `!! SIGNATURE REJECTED` in logs; bad msg dropped |
 | Partition recovery | toxiproxy timeout then remove | Commits stall on minority side, resume after heal; ledgers converge |
 
----
-
-## Submission checklist (Q1)
-
-- [ ] Git repo named `distributed-consensus-engine` with the exact structure above.
-- [ ] `git init && git add -A && git commit -m "Assignment 1 Q1"` and push to your repo.
-- [ ] Report exported as **`Assignment (Q1) [Roll No.].pdf`** (typed, not handwritten) — replace `[Roll No.]`.
-- [ ] Report includes: architecture, key distribution, **4 chaos-evaluation log screenshots**, and the **public video link** (≤5 min: build + normal txn + Byzantine recovery).
-- [ ] `docker compose build` succeeds clean.
-- [ ] Both modes demonstrated (paxos & pbft) and at least one adversary attack shown caught.
-- [ ] Ledgers (`/data/*.log`) show converged committed prefixes.
-
-### Common mistakes to avoid
-- Forgetting to replace `[Roll No.]` in the PDF filename (auto-grader may reject).
-- Submitting a handwritten Q1 report (explicitly prohibited).
-- Omitting the screenshots or the video link.
-- Running PBFT mode without the `--profile byzantine` adversary (then there's nothing to "catch").
-- Leaving `CONSENSUS_MODE` unset when you meant PBFT (defaults to paxos).
-```
-```
