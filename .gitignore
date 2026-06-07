@@ -31,3 +31,10 @@ tmp/
 
 # Archives
 *.zip
+
+# Ignore intermediate root-level evidence logs
+/evidence-chaos-paxos.txt
+/evidence-chaos-paxos-fixed.txt
+/evidence-pbft-byzantine.txt
+/evidence-pbft-signature-reject.txt
+/evidence-signature-rejected-only.txt
