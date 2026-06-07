@@ -329,8 +329,6 @@ On start up a node reloads its ledger from disk. A background loop computes the 
 - [x] `project_report.pdf` typed as **Assignment (Q1) G25AI1024.pdf**
 - [ ] Public demonstration video, maximum 5 minutes &nbsp; &rarr; &nbsp; **[vlink]**
 
-> The video must show the `docker compose` build, a normal transaction run, and a successful recovery from an injected Byzantine fault. A scripted shot list is provided in the demo guide.
-
 ---
 
 ## 14. Author
