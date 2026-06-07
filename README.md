@@ -327,8 +327,7 @@ On start up a node reloads its ledger from disk. A background loop computes the 
 - [x] `Dockerfile`, `docker-compose.yml` (5 nodes, adversary, client, Toxiproxy), `requirements.txt`
 - [x] Consolidated chaos evaluation logs in `evidence/`
 - [x] `project_report.pdf` typed as **Assignment (Q1) G25AI1024.pdf**
-- [ ] Public demonstration video, maximum 5 minutes &nbsp; &rarr; &nbsp; **https://youtu.be/pSozB86265k<img width="468" height="11" alt="image" src="https://github.com/user-attachments/assets/bef2e302-62b1-4ed8-8f65-f8166816f9c2" />
-**
+- [ ] Public demonstration video, maximum 5 minutes &nbsp; &rarr; &nbsp; **https://youtu.be/pSozB86265k**
 
 ---
 
