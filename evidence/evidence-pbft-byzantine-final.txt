@@ -1,0 +1,48 @@
+===== Byzantine forged/tampered message rejected =====
+node4  | [13:26:52] [node4] !! SIGNATURE REJECTED from node1 seq=999 (dropping spoofed/tampered msg)
+node3  | [13:26:52] [node3] !! SIGNATURE REJECTED from node1 seq=999 (dropping spoofed/tampered msg)
+node2  | [13:26:52] [node2] !! SIGNATURE REJECTED from node1 seq=999 (dropping spoofed/tampered msg)
+node5      | [13:26:52] [node5] !! SIGNATURE REJECTED from node1 seq=999 (dropping spoofed/tampered msg)
+node1      | [13:26:52] [node1] !! SIGNATURE REJECTED from node1 seq=999 (dropping spoofed/tampered msg)
+
+===== Valid PBFT commits continued after rejection =====
+node3  | [13:27:16] [node3] PBFT COMMIT seq=112 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:16] [node3] LEDGER append seq=112 -> /data/node3.log
+node3  | [13:27:17] [node3] PBFT COMMIT seq=113 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:17] [node3] LEDGER append seq=113 -> /data/node3.log
+node3  | [13:27:17] [node3] PBFT COMMIT seq=114 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:17] [node3] LEDGER append seq=114 -> /data/node3.log
+node3  | [13:27:18] [node3] PBFT COMMIT seq=115 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:18] [node3] LEDGER append seq=115 -> /data/node3.log
+node3  | [13:27:18] [node3] PBFT COMMIT seq=116 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:18] [node3] LEDGER append seq=116 -> /data/node3.log
+node3  | [13:27:18] [node3] PBFT COMMIT seq=117 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:18] [node3] LEDGER append seq=117 -> /data/node3.log
+node3  | [13:27:19] [node3] PBFT COMMIT seq=118 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:19] [node3] LEDGER append seq=118 -> /data/node3.log
+node3  | [13:27:19] [node3] PBFT COMMIT seq=119 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:19] [node3] LEDGER append seq=119 -> /data/node3.log
+node3  | [13:27:19] [node3] PBFT COMMIT seq=120 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:19] [node3] LEDGER append seq=120 -> /data/node3.log
+node3  | [13:27:20] [node3] PBFT COMMIT seq=121 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:20] [node3] LEDGER append seq=121 -> /data/node3.log
+node3  | [13:27:20] [node3] PBFT COMMIT seq=122 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:20] [node3] LEDGER append seq=122 -> /data/node3.log
+node3  | [13:27:21] [node3] PBFT COMMIT seq=123 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:21] [node3] LEDGER append seq=123 -> /data/node3.log
+node3  | [13:27:21] [node3] PBFT COMMIT seq=124 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:21] [node3] LEDGER append seq=124 -> /data/node3.log
+node3  | [13:27:21] [node3] PBFT COMMIT seq=125 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:21] [node3] LEDGER append seq=125 -> /data/node3.log
+node3  | [13:27:22] [node3] PBFT COMMIT seq=126 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:22] [node3] LEDGER append seq=126 -> /data/node3.log
+node3  | [13:27:22] [node3] PBFT COMMIT seq=127 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:22] [node3] LEDGER append seq=127 -> /data/node3.log
+node3  | [13:27:22] [node3] PBFT COMMIT seq=128 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:22] [node3] LEDGER append seq=128 -> /data/node3.log
+node3  | [13:27:23] [node3] PBFT COMMIT seq=129 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:23] [node3] LEDGER append seq=129 -> /data/node3.log
+node3  | [13:27:23] [node3] PBFT COMMIT seq=130 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:23] [node3] LEDGER append seq=130 -> /data/node3.log
+node3  | [13:27:23] [node3] PBFT COMMIT seq=131 value=transfer (quorum 3/5, Byzantine-safe)
+node3  | [13:27:24] [node3] LEDGER append seq=131 -> /data/node3.log

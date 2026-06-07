@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Generated/test keys
+_keytest/
+_k/
+keys/
+*.pem
+*.key
+*.pub
+
+# Runtime data
+data/
+docker-data/
+tmp/
+
+# Editor files
+.vscode/
+.idea/
+
+# Archives
+*.zip

@@ -1,0 +1,150 @@
+node5  | [12:47:50] [node5] PAXOS LEARN/DECIDE slot=699 value=transfer
+node5  | [12:47:50] [node5] LEDGER append seq=699 -> /data/node5.log
+node5  | [12:47:50] [node5] PAXOS LEARN/DECIDE slot=700 value=transfer
+node3  | [12:47:49] [node3] PAXOS COMMIT slot=696 value=transfer (majority 3/5)
+node3  | [12:47:49] [node3] LEDGER append seq=696 -> /data/node3.log
+node3  | [12:47:49] [node3] PAXOS COMMIT slot=697 value=transfer (majority 3/5)
+node3  | [12:47:49] [node3] LEDGER append seq=697 -> /data/node3.log
+node3  | [12:47:49] [node3] PAXOS COMMIT slot=698 value=transfer (majority 3/5)
+node3  | [12:47:49] [node3] LEDGER append seq=698 -> /data/node3.log
+node3  | [12:47:50] [node3] PAXOS COMMIT slot=699 value=transfer (majority 3/5)
+node5  | [12:47:50] [node5] LEDGER append seq=700 -> /data/node5.log
+node5  | [12:47:50] [node5] PAXOS LEARN/DECIDE slot=701 value=transfer
+node5  | [12:47:50] [node5] LEDGER append seq=701 -> /data/node5.log
+node3  | [12:47:50] [node3] LEDGER append seq=699 -> /data/node3.log
+node5  | [12:47:51] [node5] PAXOS LEARN/DECIDE slot=702 value=transfer
+node5  | [12:47:51] [node5] LEDGER append seq=702 -> /data/node5.log
+node5  | [12:47:51] [node5] PAXOS LEARN/DECIDE slot=703 value=transfer
+node3  | [12:47:50] [node3] PAXOS COMMIT slot=700 value=transfer (majority 3/5)
+node5  | [12:47:51] [node5] LEDGER append seq=703 -> /data/node5.log
+node5  | [12:47:52] [node5] PAXOS LEARN/DECIDE slot=704 value=transfer
+node5  | [12:47:52] [node5] LEDGER append seq=704 -> /data/node5.log
+node5  | [12:47:52] [node5] PAXOS LEARN/DECIDE slot=705 value=transfer
+node5  | [12:47:52] [node5] LEDGER append seq=705 -> /data/node5.log
+node5  | [12:47:53] [node5] PAXOS LEARN/DECIDE slot=706 value=transfer
+node5  | [12:47:53] [node5] LEDGER append seq=706 -> /data/node5.log
+node5  | [12:47:53] [node5] PAXOS LEARN/DECIDE slot=707 value=transfer
+node3  | [12:47:50] [node3] LEDGER append seq=700 -> /data/node3.log
+node5  | [12:47:53] [node5] LEDGER append seq=707 -> /data/node5.log
+node5  | [12:47:53] [node5] PAXOS LEARN/DECIDE slot=708 value=transfer
+node5  | [12:47:53] [node5] LEDGER append seq=708 -> /data/node5.log
+node5  | [12:47:54] [node5] PAXOS LEARN/DECIDE slot=709 value=transfer
+node5  | [12:47:54] [node5] LEDGER append seq=709 -> /data/node5.log
+node5  | [12:47:54] [node5] PAXOS LEARN/DECIDE slot=710 value=transfer
+node5  | [12:47:54] [node5] LEDGER append seq=710 -> /data/node5.log
+node3  | [12:47:50] [node3] PAXOS COMMIT slot=701 value=transfer (majority 3/5)
+node3  | [12:47:50] [node3] LEDGER append seq=701 -> /data/node3.log
+node5  | [12:47:54] [node5] PAXOS LEARN/DECIDE slot=711 value=transfer
+node5  | [12:47:54] [node5] LEDGER append seq=711 -> /data/node5.log
+node3  | [12:47:51] [node3] PAXOS COMMIT slot=702 value=transfer (majority 3/5)
+node5  | [12:47:55] [node5] PAXOS LEARN/DECIDE slot=712 value=transfer
+node3  | [12:47:51] [node3] LEDGER append seq=702 -> /data/node3.log
+node5  | [12:47:55] [node5] LEDGER append seq=712 -> /data/node5.log
+node5  | [12:47:55] [node5] PAXOS LEARN/DECIDE slot=713 value=transfer
+node5  | [12:47:55] [node5] LEDGER append seq=713 -> /data/node5.log
+node5  | [12:47:55] [node5] PAXOS LEARN/DECIDE slot=714 value=transfer
+node5  | [12:47:55] [node5] LEDGER append seq=714 -> /data/node5.log
+node5  | [12:47:56] [node5] PAXOS LEARN/DECIDE slot=715 value=transfer
+node5  | [12:47:56] [node5] LEDGER append seq=715 -> /data/node5.log
+node5  | [12:47:56] [node5] PAXOS LEARN/DECIDE slot=716 value=transfer
+node5  | [12:47:56] [node5] LEDGER append seq=716 -> /data/node5.log
+node5  | [12:47:56] [node5] PAXOS LEARN/DECIDE slot=717 value=transfer
+node5  | [12:47:56] [node5] LEDGER append seq=717 -> /data/node5.log
+node5  | [12:47:57] [node5] PAXOS LEARN/DECIDE slot=718 value=transfer
+node5  | [12:47:57] [node5] LEDGER append seq=718 -> /data/node5.log
+node5  | [12:47:57] [node5] PAXOS LEARN/DECIDE slot=719 value=transfer
+node5  | [12:47:57] [node5] LEDGER append seq=719 -> /data/node5.log
+node5  | [12:47:57] [node5] PAXOS LEARN/DECIDE slot=720 value=transfer
+node5  | [12:47:57] [node5] LEDGER append seq=720 -> /data/node5.log
+node5  | [12:47:58] [node5] PAXOS LEARN/DECIDE slot=721 value=transfer
+node5  | [12:47:58] [node5] LEDGER append seq=721 -> /data/node5.log
+node5  | [12:47:59] [node5] PAXOS LEARN/DECIDE slot=722 value=transfer
+node5  | [12:47:59] [node5] LEDGER append seq=722 -> /data/node5.log
+node5  | [12:47:59] [node5] PAXOS LEARN/DECIDE slot=723 value=transfer
+node3  | [12:47:51] [node3] PAXOS COMMIT slot=703 value=transfer (majority 3/5)
+node3  | [12:47:51] [node3] LEDGER append seq=703 -> /data/node3.log
+node3  | [12:47:52] [node3] PAXOS COMMIT slot=704 value=transfer (majority 3/5)
+node3  | [12:47:52] [node3] LEDGER append seq=704 -> /data/node3.log
+node3  | [12:47:52] [node3] PAXOS COMMIT slot=705 value=transfer (majority 3/5)
+node3  | [12:47:52] [node3] LEDGER append seq=705 -> /data/node3.log
+node5  | [12:47:59] [node5] LEDGER append seq=723 -> /data/node5.log
+node5  | [12:47:59] [node5] PAXOS LEARN/DECIDE slot=724 value=transfer
+node5  | [12:47:59] [node5] LEDGER append seq=724 -> /data/node5.log
+node5  | [12:48:00] [node5] PAXOS LEARN/DECIDE slot=725 value=transfer
+node5  | [12:48:00] [node5] LEDGER append seq=725 -> /data/node5.log
+node5  | [12:48:00] [node5] PAXOS LEARN/DECIDE slot=726 value=transfer
+node5  | [12:48:00] [node5] LEDGER append seq=726 -> /data/node5.log
+node5  | [12:48:00] [node5] PAXOS LEARN/DECIDE slot=727 value=transfer
+node5  | [12:48:00] [node5] LEDGER append seq=727 -> /data/node5.log
+node5  | [12:48:01] [node5] PAXOS LEARN/DECIDE slot=728 value=transfer
+node5  | [12:48:01] [node5] LEDGER append seq=728 -> /data/node5.log
+node5  | [12:48:01] [node5] PAXOS LEARN/DECIDE slot=729 value=transfer
+node5  | [12:48:01] [node5] LEDGER append seq=729 -> /data/node5.log
+node3  | [12:47:53] [node3] PAXOS COMMIT slot=706 value=transfer (majority 3/5)
+node3  | [12:47:53] [node3] LEDGER append seq=706 -> /data/node3.log
+node3  | [12:47:53] [node3] PAXOS COMMIT slot=707 value=transfer (majority 3/5)
+node5  | [12:48:01] [node5] PAXOS LEARN/DECIDE slot=730 value=transfer
+node5  | [12:48:01] [node5] LEDGER append seq=730 -> /data/node5.log
+node5  | [12:48:02] [node5] PAXOS LEARN/DECIDE slot=731 value=transfer
+node5  | [12:48:02] [node5] LEDGER append seq=731 -> /data/node5.log
+node5  | [12:48:02] [node5] PAXOS LEARN/DECIDE slot=732 value=transfer
+node5  | [12:48:02] [node5] LEDGER append seq=732 -> /data/node5.log
+node5  | [12:48:02] [node5] PAXOS LEARN/DECIDE slot=733 value=transfer
+node5  | [12:48:02] [node5] LEDGER append seq=733 -> /data/node5.log
+node5  | [12:48:03] [node5] PAXOS LEARN/DECIDE slot=734 value=transfer
+node5  | [12:48:03] [node5] LEDGER append seq=734 -> /data/node5.log
+node3  | [12:47:53] [node3] LEDGER append seq=707 -> /data/node3.log
+node3  | [12:47:53] [node3] PAXOS COMMIT slot=708 value=transfer (majority 3/5)
+node3  | [12:47:53] [node3] LEDGER append seq=708 -> /data/node3.log
+node3  | [12:47:53] [node3] PAXOS COMMIT slot=709 value=transfer (majority 3/5)
+node3  | [12:47:54] [node3] LEDGER append seq=709 -> /data/node3.log
+node3  | [12:47:54] [node3] PAXOS COMMIT slot=710 value=transfer (majority 3/5)
+node3  | [12:47:54] [node3] LEDGER append seq=710 -> /data/node3.log
+node3  | [12:47:54] [node3] PAXOS COMMIT slot=711 value=transfer (majority 3/5)
+node3  | [12:47:54] [node3] LEDGER append seq=711 -> /data/node3.log
+node3  | [12:47:55] [node3] PAXOS COMMIT slot=712 value=transfer (majority 3/5)
+node3  | [12:47:55] [node3] LEDGER append seq=712 -> /data/node3.log
+node3  | [12:47:55] [node3] PAXOS COMMIT slot=713 value=transfer (majority 3/5)
+node3  | [12:47:55] [node3] LEDGER append seq=713 -> /data/node3.log
+node3  | [12:47:55] [node3] PAXOS COMMIT slot=714 value=transfer (majority 3/5)
+node3  | [12:47:55] [node3] LEDGER append seq=714 -> /data/node3.log
+node3  | [12:47:56] [node3] PAXOS COMMIT slot=715 value=transfer (majority 3/5)
+node3  | [12:47:56] [node3] LEDGER append seq=715 -> /data/node3.log
+node3  | [12:47:56] [node3] PAXOS COMMIT slot=716 value=transfer (majority 3/5)
+node3  | [12:47:56] [node3] LEDGER append seq=716 -> /data/node3.log
+node3  | [12:47:56] [node3] PAXOS COMMIT slot=717 value=transfer (majority 3/5)
+node3  | [12:47:56] [node3] LEDGER append seq=717 -> /data/node3.log
+node3  | [12:47:57] [node3] PAXOS COMMIT slot=718 value=transfer (majority 3/5)
+node3  | [12:47:57] [node3] LEDGER append seq=718 -> /data/node3.log
+node3  | [12:47:57] [node3] PAXOS COMMIT slot=719 value=transfer (majority 3/5)
+node3  | [12:47:57] [node3] LEDGER append seq=719 -> /data/node3.log
+node3  | [12:47:57] [node3] PAXOS COMMIT slot=720 value=transfer (majority 3/5)
+node3  | [12:47:57] [node3] LEDGER append seq=720 -> /data/node3.log
+node3  | [12:47:58] [node3] PAXOS COMMIT slot=721 value=transfer (majority 3/5)
+node3  | [12:47:58] [node3] LEDGER append seq=721 -> /data/node3.log
+node3  | [12:47:58] [node3] PAXOS COMMIT slot=722 value=transfer (majority 3/5)
+node3  | [12:47:59] [node3] LEDGER append seq=722 -> /data/node3.log
+node3  | [12:47:59] [node3] PAXOS COMMIT slot=723 value=transfer (majority 3/5)
+node3  | [12:47:59] [node3] LEDGER append seq=723 -> /data/node3.log
+node3  | [12:47:59] [node3] PAXOS COMMIT slot=724 value=transfer (majority 3/5)
+node3  | [12:47:59] [node3] LEDGER append seq=724 -> /data/node3.log
+node3  | [12:48:00] [node3] PAXOS COMMIT slot=725 value=transfer (majority 3/5)
+node3  | [12:48:00] [node3] LEDGER append seq=725 -> /data/node3.log
+node3  | [12:48:00] [node3] PAXOS COMMIT slot=726 value=transfer (majority 3/5)
+node3  | [12:48:00] [node3] LEDGER append seq=726 -> /data/node3.log
+node3  | [12:48:00] [node3] PAXOS COMMIT slot=727 value=transfer (majority 3/5)
+node3  | [12:48:00] [node3] LEDGER append seq=727 -> /data/node3.log
+node3  | [12:48:01] [node3] PAXOS COMMIT slot=728 value=transfer (majority 3/5)
+node3  | [12:48:01] [node3] LEDGER append seq=728 -> /data/node3.log
+node3  | [12:48:01] [node3] PAXOS COMMIT slot=729 value=transfer (majority 3/5)
+node3  | [12:48:01] [node3] LEDGER append seq=729 -> /data/node3.log
+node3  | [12:48:01] [node3] PAXOS COMMIT slot=730 value=transfer (majority 3/5)
+node3  | [12:48:01] [node3] LEDGER append seq=730 -> /data/node3.log
+node3  | [12:48:02] [node3] PAXOS COMMIT slot=731 value=transfer (majority 3/5)
+node3  | [12:48:02] [node3] LEDGER append seq=731 -> /data/node3.log
+node3  | [12:48:02] [node3] PAXOS COMMIT slot=732 value=transfer (majority 3/5)
+node3  | [12:48:02] [node3] LEDGER append seq=732 -> /data/node3.log
+node3  | [12:48:02] [node3] PAXOS COMMIT slot=733 value=transfer (majority 3/5)
+node3  | [12:48:02] [node3] LEDGER append seq=733 -> /data/node3.log
+node3  | [12:48:03] [node3] PAXOS COMMIT slot=734 value=transfer (majority 3/5)
+node3  | [12:48:03] [node3] LEDGER append seq=734 -> /data/node3.log

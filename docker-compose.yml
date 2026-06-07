@@ -1,0 +1,94 @@
+# docker-compose.yml
+# ==================
+# 5 consensus nodes + 1 Byzantine adversary + 1 client + Toxiproxy simulator.
+#
+# Switch protocol globally with the CONSENSUS_MODE env var:
+#     CONSENSUS_MODE=paxos docker compose up --build      (Mode A)
+#     CONSENSUS_MODE=pbft  docker compose up --build      (Mode B)
+# Defaults to paxos if unset (see ${CONSENSUS_MODE:-paxos}).
+#
+# In Mode A (paxos) the adversary is harmless noise; bring it up only for
+# Mode B to demonstrate Byzantine fault tolerance.
+
+x-node-base: &node-base
+  build: .
+  image: dce-node:latest
+  volumes:
+    - keys:/keys
+    - data:/data
+  environment: &node-env
+    PEERS: "node1,node2,node3,node4,node5"
+    PEER_PORT: "9000"
+    CLIENT_PORT: "8000"
+    CONSENSUS_MODE: "${CONSENSUS_MODE:-paxos}"
+    DATA_DIR: "/data"
+    KEYS_DIR: "/keys"
+  networks: [consensus_net]
+  restart: unless-stopped
+
+services:
+  node1:
+    <<: *node-base
+    container_name: node1
+    environment: { <<: *node-env, NODE_ID: "node1" }
+    ports: ["8001:8000"]
+
+  node2:
+    <<: *node-base
+    container_name: node2
+    environment: { <<: *node-env, NODE_ID: "node2" }
+    ports: ["8002:8000"]
+
+  node3:
+    <<: *node-base
+    container_name: node3
+    environment: { <<: *node-env, NODE_ID: "node3" }
+    ports: ["8003:8000"]
+
+  node4:
+    <<: *node-base
+    container_name: node4
+    environment: { <<: *node-env, NODE_ID: "node4" }
+    ports: ["8004:8000"]
+
+  node5:
+    <<: *node-base
+    container_name: node5
+    environment: { <<: *node-env, NODE_ID: "node5" }
+    ports: ["8005:8000"]
+
+  # The malicious node. Joins the cluster as "node6" but runs adversary.py.
+  # ADVERSARY_MODE: equivocate | suppress | tamper | forge
+  adversary:
+    <<: *node-base
+    container_name: adversary
+    command: ["python", "adversary.py"]
+    environment:
+      <<: *node-env
+      NODE_ID: "adversary"
+      PEERS: "node1,node2,node3,node4,node5,adversary"
+      ADVERSARY_MODE: "${ADVERSARY_MODE:-equivocate}"
+    profiles: ["byzantine"]   # only starts with: --profile byzantine
+
+  # Continuous transaction generator.
+  client:
+    <<: *node-base
+    container_name: client
+    command: ["python", "client.py", "--count", "200", "--rate", "3"]
+    depends_on: [node1, node2, node3, node4, node5]
+
+  # Network fault injector (latency, packet loss, partitions).
+  toxiproxy:
+    image: ghcr.io/shopify/toxiproxy:2.9.0
+    container_name: toxiproxy
+    ports: ["8474:8474"]   # Toxiproxy admin/API
+    networks: [consensus_net]
+    restart: unless-stopped
+
+networks:
+  consensus_net:
+    driver: bridge
+
+volumes:
+  keys:
+  data:

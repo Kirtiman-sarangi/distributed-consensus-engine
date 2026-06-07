@@ -1,0 +1,143 @@
+
+================ STEP 0: confirm cluster is up ================
+
+NAME        IMAGE                             COMMAND                  SERVICE     CREATED         STATUS         PORTS
+node1       dce-node:latest                   "python node.py"         node1       2 minutes ago   Up 2 minutes   0.0.0.0:8001->8000/tcp, [::]:8001->8000/tcp
+node2       dce-node:latest                   "python node.py"         node2       2 minutes ago   Up 2 minutes   0.0.0.0:8002->8000/tcp, [::]:8002->8000/tcp
+node3       dce-node:latest                   "python node.py"         node3       2 minutes ago   Up 2 minutes   0.0.0.0:8003->8000/tcp, [::]:8003->8000/tcp
+node4       dce-node:latest                   "python node.py"         node4       2 minutes ago   Up 2 minutes   0.0.0.0:8004->8000/tcp, [::]:8004->8000/tcp
+node5       dce-node:latest                   "python node.py"         node5       2 minutes ago   Up 2 minutes   0.0.0.0:8005->8000/tcp, [::]:8005->8000/tcp
+toxiproxy   ghcr.io/shopify/toxiproxy:2.9.0   "/toxiproxy -host=0.…"   toxiproxy   2 minutes ago   Up 2 minutes   0.0.0.0:8474->8474/tcp, [::]:8474->8474/tcp
+
+================ STEP 1: register Toxiproxy routes ================
+
+Created new proxy node2_proxy
+Created new proxy node3_proxy
+node2_proxy	[::]:19002	node2:9000	enabled	0
+node3_proxy	[::]:19003	node3:9000	enabled	0
+
+================ STEP 2: start continuous client load in background ================
+
+
+================ STEP 3: detect and crash current leader ================
+
+current leader: node1
+
+================ STEP 4: crash second node to test Paxos f=2 boundary ================
+
+second crashed node: node5
+
+================ STEP 5: inject 800ms latency using Toxiproxy ================
+
+Added downstream latency toxic 'node2_latency' on proxy 'node2_proxy'
+Added downstream latency toxic 'node3_latency' on proxy 'node3_proxy'
+node2_latency	type=latency	stream=downstream	toxicity=1.00	attributes=[	jitter=0	latency=800	]
+node3_latency	type=latency	stream=downstream	toxicity=1.00	attributes=[	jitter=0	latency=800	]
+
+================ STEP 6: inject timeout partition using Toxiproxy ================
+
+Added downstream timeout toxic 'node2_timeout' on proxy 'node2_proxy'
+Added downstream timeout toxic 'node3_timeout' on proxy 'node3_proxy'
+node2_latency	type=latency	stream=downstream	toxicity=1.00	attributes=[	jitter=0	latency=800	]
+node2_timeout	type=timeout	stream=downstream	toxicity=1.00	attributes=[	timeout=0	]
+node3_latency	type=latency	stream=downstream	toxicity=1.00	attributes=[	jitter=0	latency=800	]
+node3_timeout	type=timeout	stream=downstream	toxicity=1.00	attributes=[	timeout=0	]
+
+================ STEP 7: heal partition and restart crashed nodes ================
+
+
+================ STEP 8: stop client ================
+
+
+================ STEP 9: verify ledger convergence ================
+
+node1 committed entries: 1020
+node2 committed entries: 1020
+node3 committed entries: 1020
+node4 committed entries: 1020
+node5 committed entries: 1020
+
+================ STEP 10: recent Paxos evidence ================
+
+node3  | [13:08:41] [node3] PAXOS COMMIT slot=980 value=transfer (majority 3/5)
+node3  | [13:08:41] [node3] LEDGER append seq=980 -> /data/node3.log
+node3  | [13:08:42] [node3] PAXOS COMMIT slot=981 value=transfer (majority 3/5)
+node3  | [13:08:42] [node3] LEDGER append seq=981 -> /data/node3.log
+node3  | [13:08:42] [node3] PAXOS COMMIT slot=982 value=transfer (majority 3/5)
+node3  | [13:08:42] [node3] LEDGER append seq=982 -> /data/node3.log
+node3  | [13:08:42] [node3] PAXOS COMMIT slot=983 value=transfer (majority 3/5)
+node3  | [13:08:42] [node3] LEDGER append seq=983 -> /data/node3.log
+node3  | [13:08:43] [node3] PAXOS COMMIT slot=984 value=transfer (majority 3/5)
+node3  | [13:08:43] [node3] LEDGER append seq=984 -> /data/node3.log
+node3  | [13:08:43] [node3] PAXOS COMMIT slot=985 value=transfer (majority 3/5)
+node3  | [13:08:43] [node3] LEDGER append seq=985 -> /data/node3.log
+node3  | [13:08:43] [node3] PAXOS COMMIT slot=986 value=transfer (majority 3/5)
+node3  | [13:08:43] [node3] LEDGER append seq=986 -> /data/node3.log
+node3  | [13:08:44] [node3] PAXOS COMMIT slot=987 value=transfer (majority 3/5)
+node3  | [13:08:44] [node3] LEDGER append seq=987 -> /data/node3.log
+node3  | [13:08:44] [node3] PAXOS COMMIT slot=988 value=transfer (majority 3/5)
+node3  | [13:08:44] [node3] LEDGER append seq=988 -> /data/node3.log
+node3  | [13:08:44] [node3] PAXOS COMMIT slot=989 value=transfer (majority 3/5)
+node3  | [13:08:44] [node3] LEDGER append seq=989 -> /data/node3.log
+node3  | [13:08:45] [node3] PAXOS COMMIT slot=990 value=transfer (majority 3/5)
+node3  | [13:08:45] [node3] LEDGER append seq=990 -> /data/node3.log
+node3  | [13:08:45] [node3] PAXOS COMMIT slot=991 value=transfer (majority 3/5)
+node3  | [13:08:45] [node3] LEDGER append seq=991 -> /data/node3.log
+node3  | [13:08:46] [node3] PAXOS COMMIT slot=992 value=transfer (majority 3/5)
+node3  | [13:08:46] [node3] LEDGER append seq=992 -> /data/node3.log
+node3  | [13:08:46] [node3] PAXOS COMMIT slot=993 value=transfer (majority 3/5)
+node3  | [13:08:46] [node3] LEDGER append seq=993 -> /data/node3.log
+node3  | [13:08:46] [node3] PAXOS COMMIT slot=994 value=transfer (majority 3/5)
+node3  | [13:08:46] [node3] LEDGER append seq=994 -> /data/node3.log
+node3  | [13:08:47] [node3] PAXOS COMMIT slot=995 value=transfer (majority 3/5)
+node3  | [13:08:47] [node3] LEDGER append seq=995 -> /data/node3.log
+node3  | [13:08:47] [node3] PAXOS COMMIT slot=996 value=transfer (majority 3/5)
+node3  | [13:08:47] [node3] LEDGER append seq=996 -> /data/node3.log
+node3  | [13:08:47] [node3] PAXOS COMMIT slot=997 value=transfer (majority 3/5)
+node3  | [13:08:47] [node3] LEDGER append seq=997 -> /data/node3.log
+node3  | [13:08:48] [node3] PAXOS COMMIT slot=998 value=transfer (majority 3/5)
+node3  | [13:08:48] [node3] LEDGER append seq=998 -> /data/node3.log
+node3  | [13:08:48] [node3] PAXOS COMMIT slot=999 value=transfer (majority 3/5)
+node3  | [13:08:48] [node3] LEDGER append seq=999 -> /data/node3.log
+node3  | [13:08:48] [node3] PAXOS COMMIT slot=1000 value=transfer (majority 3/5)
+node3  | [13:08:48] [node3] LEDGER append seq=1000 -> /data/node3.log
+node3  | [13:08:49] [node3] PAXOS COMMIT slot=1001 value=transfer (majority 3/5)
+node3  | [13:08:49] [node3] LEDGER append seq=1001 -> /data/node3.log
+node3  | [13:08:49] [node3] PAXOS COMMIT slot=1002 value=transfer (majority 3/5)
+node3  | [13:08:49] [node3] LEDGER append seq=1002 -> /data/node3.log
+node3  | [13:08:49] [node3] PAXOS COMMIT slot=1003 value=transfer (majority 3/5)
+node3  | [13:08:49] [node3] LEDGER append seq=1003 -> /data/node3.log
+node3  | [13:08:50] [node3] PAXOS COMMIT slot=1004 value=transfer (majority 3/5)
+node3  | [13:08:50] [node3] LEDGER append seq=1004 -> /data/node3.log
+node3  | [13:08:50] [node3] PAXOS COMMIT slot=1005 value=transfer (majority 3/5)
+node3  | [13:08:50] [node3] LEDGER append seq=1005 -> /data/node3.log
+node3  | [13:08:50] [node3] PAXOS COMMIT slot=1006 value=transfer (majority 3/5)
+node3  | [13:08:50] [node3] LEDGER append seq=1006 -> /data/node3.log
+node3  | [13:08:51] [node3] PAXOS COMMIT slot=1007 value=transfer (majority 3/5)
+node3  | [13:08:51] [node3] LEDGER append seq=1007 -> /data/node3.log
+node3  | [13:08:51] [node3] PAXOS COMMIT slot=1008 value=transfer (majority 3/5)
+node3  | [13:08:51] [node3] LEDGER append seq=1008 -> /data/node3.log
+node3  | [13:08:52] [node3] PAXOS COMMIT slot=1009 value=transfer (majority 3/5)
+node3  | [13:08:52] [node3] LEDGER append seq=1009 -> /data/node3.log
+node3  | [13:08:52] [node3] PAXOS COMMIT slot=1010 value=transfer (majority 3/5)
+node3  | [13:08:52] [node3] LEDGER append seq=1010 -> /data/node3.log
+node3  | [13:08:52] [node3] PAXOS COMMIT slot=1011 value=transfer (majority 3/5)
+node3  | [13:08:52] [node3] LEDGER append seq=1011 -> /data/node3.log
+node3  | [13:08:53] [node3] PAXOS COMMIT slot=1012 value=transfer (majority 3/5)
+node3  | [13:08:53] [node3] LEDGER append seq=1012 -> /data/node3.log
+node3  | [13:08:53] [node3] PAXOS COMMIT slot=1013 value=transfer (majority 3/5)
+node3  | [13:08:53] [node3] LEDGER append seq=1013 -> /data/node3.log
+node3  | [13:08:53] [node3] PAXOS COMMIT slot=1014 value=transfer (majority 3/5)
+node3  | [13:08:53] [node3] LEDGER append seq=1014 -> /data/node3.log
+node3  | [13:08:54] [node3] PAXOS COMMIT slot=1015 value=transfer (majority 3/5)
+node3  | [13:08:54] [node3] LEDGER append seq=1015 -> /data/node3.log
+node3  | [13:08:54] [node3] PAXOS COMMIT slot=1016 value=transfer (majority 3/5)
+node3  | [13:08:54] [node3] LEDGER append seq=1016 -> /data/node3.log
+node3  | [13:08:54] [node3] PAXOS COMMIT slot=1017 value=transfer (majority 3/5)
+node3  | [13:08:54] [node3] LEDGER append seq=1017 -> /data/node3.log
+node3  | [13:08:55] [node3] PAXOS COMMIT slot=1018 value=transfer (majority 3/5)
+node3  | [13:08:55] [node3] LEDGER append seq=1018 -> /data/node3.log
+node3  | [13:08:55] [node3] PAXOS COMMIT slot=1019 value=transfer (majority 3/5)
+node3  | [13:08:55] [node3] LEDGER append seq=1019 -> /data/node3.log
+
+Fixed chaos run complete.

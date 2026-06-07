@@ -1,0 +1,150 @@
+node2  | [13:17:44] [node2] PBFT COMMIT seq=68 value=transfer (quorum 3/5, Byzantine-safe)
+node2  | [13:17:44] [node2] LEDGER append seq=68 -> /data/node2.log
+node2  | [13:17:44] [node2] PBFT PREPARED seq=69 -> broadcasting COMMIT
+node2  | [13:17:44] [node2] PBFT COMMIT seq=69 value=transfer (quorum 3/5, Byzantine-safe)
+node2  | [13:17:44] [node2] LEDGER append seq=69 -> /data/node2.log
+node2  | [13:17:45] [node2] PBFT PREPARED seq=70 -> broadcasting COMMIT
+node2  | [13:17:45] [node2] PBFT COMMIT seq=70 value=transfer (quorum 3/5, Byzantine-safe)
+node2  | [13:17:45] [node2] LEDGER append seq=70 -> /data/node2.log
+node2  | [13:17:45] [node2] PBFT PREPARED seq=71 -> broadcasting COMMIT
+node2  | [13:17:45] [node2] PBFT COMMIT seq=71 value=transfer (quorum 3/5, Byzantine-safe)
+node2  | [13:17:45] [node2] LEDGER append seq=71 -> /data/node2.log
+node2  | [13:17:45] [node2] PBFT PREPARED seq=72 -> broadcasting COMMIT
+node2  | [13:17:45] [node2] PBFT COMMIT seq=72 value=transfer (quorum 3/5, Byzantine-safe)
+node2  | [13:17:45] [node2] LEDGER append seq=72 -> /data/node2.log
+node2  | [13:17:46] [node2] PBFT PREPARED seq=73 -> broadcasting COMMIT
+node2  | [13:17:46] [node2] PBFT COMMIT seq=73 value=transfer (quorum 3/5, Byzantine-safe)
+node2  | [13:17:46] [node2] LEDGER append seq=73 -> /data/node2.log
+node2  | [13:17:46] [node2] PBFT PREPARED seq=74 -> broadcasting COMMIT
+node2  | [13:17:46] [node2] PBFT COMMIT seq=74 value=transfer (quorum 3/5, Byzantine-safe)
+node2  | [13:17:46] [node2] LEDGER append seq=74 -> /data/node2.log
+node2  | [13:17:46] [node2] PBFT PREPARED seq=75 -> broadcasting COMMIT
+node2  | [13:17:46] [node2] PBFT COMMIT seq=75 value=transfer (quorum 3/5, Byzantine-safe)
+node2  | [13:17:46] [node2] LEDGER append seq=75 -> /data/node2.log
+node2  | [13:17:47] [node2] PBFT PREPARED seq=76 -> broadcasting COMMIT
+node2  | [13:17:47] [node2] PBFT COMMIT seq=76 value=transfer (quorum 3/5, Byzantine-safe)
+node2  | [13:17:47] [node2] LEDGER append seq=76 -> /data/node2.log
+node2  | [13:17:47] [node2] PBFT PREPARED seq=77 -> broadcasting COMMIT
+node2  | [13:17:47] [node2] PBFT COMMIT seq=77 value=transfer (quorum 3/5, Byzantine-safe)
+node2  | [13:17:47] [node2] LEDGER append seq=77 -> /data/node2.log
+node2  | [13:17:47] [node2] PBFT PREPARED seq=78 -> broadcasting COMMIT
+node2  | [13:17:47] [node2] PBFT COMMIT seq=78 value=transfer (quorum 3/5, Byzantine-safe)
+node2  | [13:17:47] [node2] LEDGER append seq=78 -> /data/node2.log
+node2  | [13:17:48] [node2] PBFT PREPARED seq=79 -> broadcasting COMMIT
+node2  | [13:17:48] [node2] PBFT COMMIT seq=79 value=transfer (quorum 3/5, Byzantine-safe)
+node2  | [13:17:48] [node2] LEDGER append seq=79 -> /data/node2.log
+node1  | [13:17:34] [node1] LEDGER append seq=41 -> /data/node1.log
+node1  | [13:17:35] [node1] PBFT PREPARED seq=42 -> broadcasting COMMIT
+node1  | [13:17:35] [node1] PBFT COMMIT seq=42 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:35] [node1] LEDGER append seq=42 -> /data/node1.log
+node1  | [13:17:35] [node1] PBFT PREPARED seq=43 -> broadcasting COMMIT
+node1  | [13:17:35] [node1] PBFT COMMIT seq=43 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:35] [node1] LEDGER append seq=43 -> /data/node1.log
+node1  | [13:17:35] [node1] PBFT PREPARED seq=44 -> broadcasting COMMIT
+node1  | [13:17:35] [node1] PBFT COMMIT seq=44 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:35] [node1] LEDGER append seq=44 -> /data/node1.log
+node1  | [13:17:36] [node1] PBFT PREPARED seq=45 -> broadcasting COMMIT
+node1  | [13:17:36] [node1] PBFT COMMIT seq=45 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:36] [node1] LEDGER append seq=45 -> /data/node1.log
+node1  | [13:17:36] [node1] PBFT PREPARED seq=46 -> broadcasting COMMIT
+node1  | [13:17:36] [node1] PBFT COMMIT seq=46 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:36] [node1] LEDGER append seq=46 -> /data/node1.log
+node1  | [13:17:36] [node1] PBFT PREPARED seq=47 -> broadcasting COMMIT
+node1  | [13:17:36] [node1] PBFT COMMIT seq=47 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:36] [node1] LEDGER append seq=47 -> /data/node1.log
+node1  | [13:17:37] [node1] PBFT PREPARED seq=48 -> broadcasting COMMIT
+node1  | [13:17:37] [node1] PBFT COMMIT seq=48 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:37] [node1] LEDGER append seq=48 -> /data/node1.log
+node1  | [13:17:37] [node1] PBFT PREPARED seq=49 -> broadcasting COMMIT
+node1  | [13:17:37] [node1] PBFT COMMIT seq=49 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:37] [node1] LEDGER append seq=49 -> /data/node1.log
+node1  | [13:17:37] [node1] PBFT PREPARED seq=50 -> broadcasting COMMIT
+node1  | [13:17:37] [node1] PBFT COMMIT seq=50 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:37] [node1] LEDGER append seq=50 -> /data/node1.log
+node1  | [13:17:38] [node1] PBFT PREPARED seq=51 -> broadcasting COMMIT
+node1  | [13:17:38] [node1] PBFT COMMIT seq=51 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:38] [node1] LEDGER append seq=51 -> /data/node1.log
+node1  | [13:17:38] [node1] PBFT PREPARED seq=52 -> broadcasting COMMIT
+node1  | [13:17:38] [node1] PBFT COMMIT seq=52 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:38] [node1] LEDGER append seq=52 -> /data/node1.log
+node1  | [13:17:39] [node1] PBFT PREPARED seq=53 -> broadcasting COMMIT
+node1  | [13:17:39] [node1] PBFT COMMIT seq=53 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:39] [node1] LEDGER append seq=53 -> /data/node1.log
+node1  | [13:17:39] [node1] PBFT PREPARED seq=54 -> broadcasting COMMIT
+node1  | [13:17:39] [node1] PBFT COMMIT seq=54 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:39] [node1] LEDGER append seq=54 -> /data/node1.log
+node1  | [13:17:39] [node1] PBFT PREPARED seq=55 -> broadcasting COMMIT
+node1  | [13:17:39] [node1] PBFT COMMIT seq=55 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:39] [node1] LEDGER append seq=55 -> /data/node1.log
+node1  | [13:17:40] [node1] PBFT PREPARED seq=56 -> broadcasting COMMIT
+node1  | [13:17:40] [node1] PBFT COMMIT seq=56 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:40] [node1] LEDGER append seq=56 -> /data/node1.log
+node1  | [13:17:40] [node1] PBFT PREPARED seq=57 -> broadcasting COMMIT
+node1  | [13:17:40] [node1] PBFT COMMIT seq=57 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:40] [node1] LEDGER append seq=57 -> /data/node1.log
+node1  | [13:17:40] [node1] PBFT PREPARED seq=58 -> broadcasting COMMIT
+node1  | [13:17:40] [node1] PBFT COMMIT seq=58 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:40] [node1] LEDGER append seq=58 -> /data/node1.log
+node1  | [13:17:41] [node1] PBFT PREPARED seq=59 -> broadcasting COMMIT
+node1  | [13:17:41] [node1] PBFT COMMIT seq=59 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:41] [node1] LEDGER append seq=59 -> /data/node1.log
+node1  | [13:17:41] [node1] PBFT PREPARED seq=60 -> broadcasting COMMIT
+node1  | [13:17:41] [node1] PBFT COMMIT seq=60 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:41] [node1] LEDGER append seq=60 -> /data/node1.log
+node1  | [13:17:41] [node1] PBFT PREPARED seq=61 -> broadcasting COMMIT
+node1  | [13:17:41] [node1] PBFT COMMIT seq=61 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:41] [node1] LEDGER append seq=61 -> /data/node1.log
+node1  | [13:17:42] [node1] PBFT PREPARED seq=62 -> broadcasting COMMIT
+node1  | [13:17:42] [node1] PBFT COMMIT seq=62 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:42] [node1] LEDGER append seq=62 -> /data/node1.log
+node1  | [13:17:42] [node1] PBFT PREPARED seq=63 -> broadcasting COMMIT
+node1  | [13:17:42] [node1] PBFT COMMIT seq=63 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:42] [node1] LEDGER append seq=63 -> /data/node1.log
+node1  | [13:17:42] [node1] PBFT PREPARED seq=64 -> broadcasting COMMIT
+node1  | [13:17:42] [node1] PBFT COMMIT seq=64 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:42] [node1] LEDGER append seq=64 -> /data/node1.log
+node1  | [13:17:43] [node1] PBFT PREPARED seq=65 -> broadcasting COMMIT
+node1  | [13:17:43] [node1] PBFT COMMIT seq=65 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:43] [node1] LEDGER append seq=65 -> /data/node1.log
+node1  | [13:17:43] [node1] PBFT PREPARED seq=66 -> broadcasting COMMIT
+node1  | [13:17:43] [node1] PBFT COMMIT seq=66 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:43] [node1] LEDGER append seq=66 -> /data/node1.log
+node1  | [13:17:44] [node1] PBFT PREPARED seq=67 -> broadcasting COMMIT
+node1  | [13:17:44] [node1] PBFT COMMIT seq=67 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:44] [node1] LEDGER append seq=67 -> /data/node1.log
+node1  | [13:17:44] [node1] PBFT PREPARED seq=68 -> broadcasting COMMIT
+node1  | [13:17:44] [node1] PBFT COMMIT seq=68 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:44] [node1] LEDGER append seq=68 -> /data/node1.log
+node1  | [13:17:44] [node1] PBFT PREPARED seq=69 -> broadcasting COMMIT
+node1  | [13:17:44] [node1] PBFT COMMIT seq=69 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:44] [node1] LEDGER append seq=69 -> /data/node1.log
+node1  | [13:17:45] [node1] PBFT PREPARED seq=70 -> broadcasting COMMIT
+node1  | [13:17:45] [node1] PBFT COMMIT seq=70 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:45] [node1] LEDGER append seq=70 -> /data/node1.log
+node1  | [13:17:45] [node1] PBFT PREPARED seq=71 -> broadcasting COMMIT
+node1  | [13:17:45] [node1] PBFT COMMIT seq=71 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:45] [node1] LEDGER append seq=71 -> /data/node1.log
+node1  | [13:17:45] [node1] PBFT PREPARED seq=72 -> broadcasting COMMIT
+node1  | [13:17:45] [node1] PBFT COMMIT seq=72 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:45] [node1] LEDGER append seq=72 -> /data/node1.log
+node1  | [13:17:46] [node1] PBFT PREPARED seq=73 -> broadcasting COMMIT
+node1  | [13:17:46] [node1] PBFT COMMIT seq=73 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:46] [node1] LEDGER append seq=73 -> /data/node1.log
+node1  | [13:17:46] [node1] PBFT PREPARED seq=74 -> broadcasting COMMIT
+node1  | [13:17:46] [node1] PBFT COMMIT seq=74 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:46] [node1] LEDGER append seq=74 -> /data/node1.log
+node1  | [13:17:46] [node1] PBFT PREPARED seq=75 -> broadcasting COMMIT
+node1  | [13:17:46] [node1] PBFT COMMIT seq=75 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:46] [node1] LEDGER append seq=75 -> /data/node1.log
+node1  | [13:17:47] [node1] PBFT PREPARED seq=76 -> broadcasting COMMIT
+node1  | [13:17:47] [node1] PBFT COMMIT seq=76 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:47] [node1] LEDGER append seq=76 -> /data/node1.log
+node1  | [13:17:47] [node1] PBFT PREPARED seq=77 -> broadcasting COMMIT
+node1  | [13:17:47] [node1] PBFT COMMIT seq=77 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:47] [node1] LEDGER append seq=77 -> /data/node1.log
+node1  | [13:17:47] [node1] PBFT PREPARED seq=78 -> broadcasting COMMIT
+node1  | [13:17:47] [node1] PBFT COMMIT seq=78 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:47] [node1] LEDGER append seq=78 -> /data/node1.log
+node1  | [13:17:48] [node1] PBFT PREPARED seq=79 -> broadcasting COMMIT
+node1  | [13:17:48] [node1] PBFT COMMIT seq=79 value=transfer (quorum 3/5, Byzantine-safe)
+node1  | [13:17:48] [node1] LEDGER append seq=79 -> /data/node1.log
